@@ -9,5 +9,19 @@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-@* Print numbers from 1 to 1000
-print multiplication table for 45 *@
+ 
+ 
+@* Print numbers from 1 to 1000 *@
+@for (int i=1; i<= 1000; i++){
+    @i if (i < 1000){
+        @Html.Raw(" , ")
+    }
+}
+
+
+@* print multiplication table for 45  *@
+@for (int i = 1; i <= 10; i++)
+{
+    int result = 45 * i;
+    <p>@($"{45} * {i} = {result}")</p>
+}
