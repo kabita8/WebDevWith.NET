@@ -16,3 +16,12 @@ Developer- Local :Dev Environment (Local host)
 2.INT - All code changes. Integration Environment
 3.UAT - PO/TPO/BA, user acceptance testing
 4.PROD - Production Environment
+
+# college requirements
+# Entities/ Tables/Models
+1. Class - Id, Title, Start ,Duration, Details
+2. Course - Id, Name, TextBook, CreditHrs
+3. Student - Id, Name, Address, Email, Program(Faculty), Semester
+
+> Course has multiple classes (one to many)
+> student may enroll on multiple courses and courses can be studied by multiple sudents(many to many)
