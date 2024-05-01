@@ -1,6 +1,6 @@
-@page "/courses"
+@page "/Courses"
 @model CoursesModel
-<a href="/courses/create" class="btn btn-success"><i class="bi bi-plus-lg"></i> New Course</a>
+<a href="/Courses/create" class="btn btn-success"><i class="bi bi-plus-lg"></i> New Course</a>
 <table class="table">
     <thead>
         <tr>
@@ -8,16 +8,23 @@
             <th scope ="col">Name</th>
             <th scope ="col">Textbook</th>
             <th scope ="col">Credit Hours</th>
+            <th scope ="col">Actions</th>
         </tr>
     </thead>
     <tbody>
+        @{
+            int counter = 1;
+        }
         @foreach(var course in Model.Courses)
         {
             <tr>
-                <th>@course.Id</th>
+                <th scope="row">@(counter++)</th>
                 <td>@course.Name</td>
                 <td>@course.TextBook</td>
                 <td>@course.CreditHrs</td>
+            <td> <a href="/Courses/edit/@course.Id" class="btn btn-danger"><i class=" bi bi-pen"></i>Edit</a>
+             <a href="/Courses/delete/@course.Id" class="btn btn-dark"><i class=" bi bi-trash3"></i>Delete</a></td>
+
             </tr>
         }
     </tbody>

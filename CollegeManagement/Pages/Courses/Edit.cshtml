@@ -1,8 +1,9 @@
-@page "/Courses/create"
-@model CreateCourseModel
-<h2> New Course Entry</h2>
+@page "/Courses/edit/{id:int}"
+@model EditCourseModel
+<h2> Update Course Entry</h2>
 
 <form method="post">
+  <input type="hidden" asp-for="Course.Id"/>
   <div class="mb-3">
     <label  class="form-label">Name</label>
     <input asp-for="Course.Name" class="form-control">
