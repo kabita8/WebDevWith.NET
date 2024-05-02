@@ -7,3 +7,15 @@ public class Session
     public float DurationInHours{ get; set; }
 
 }
+// class A
+// {
+
+// }
+// class B
+// {
+//     A a1;
+//     public B(A.a2)
+//     {
+//         a1 = a2;
+//     }
+// }
