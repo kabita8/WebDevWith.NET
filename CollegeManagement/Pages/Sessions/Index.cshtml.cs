@@ -17,11 +17,11 @@ namespace CollegeManagement.Pages_Sessions
             _context = context;
         }
 
-        public IList<Session> Session { get;set; } = default!;
+        public List<Session> Session { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            Session = await _context.Session.ToListAsync();
+            Session = await _context.Session.Include(x => x.Course).ToListAsync();
         }
     }
 }

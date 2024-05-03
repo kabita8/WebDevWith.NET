@@ -2,13 +2,16 @@
 @model CollegeManagement.Pages_Sessions.IndexModel
 <p>
 
-    <a asp-page="/Sessions/Create" class="btn btn-success"><i class="bi bi-plus-lg"></i>Create New</a>
+    <a asp-page="/Sessions/Create" class="btn btn-success"><i class="bi bi-plus-lg"></i>Add Session</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Session[0].Title)
+            </th>
+            <th>
+                Course
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Session[0].Details)
@@ -27,6 +30,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @(item.Course?.Name ?? "N/A")
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Details)

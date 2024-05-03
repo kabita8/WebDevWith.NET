@@ -6,16 +6,6 @@ public class Session
     public DateTime Start{ get; set; }
     public float DurationInHours{ get; set; }
 
+    public int? CourseId { get; set; }
+    public Course? Course { get; set; }
 }
-// class A
-// {
-
-// }
-// class B
-// {
-//     A a1;
-//     public B(A.a2)
-//     {
-//         a1 = a2;
-//     }
-// }
